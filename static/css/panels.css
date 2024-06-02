@@ -1,0 +1,189 @@
+#navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    gap: 1rem;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    gap:10rem;
+}
+
+.navbar-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap:1rem;
+}
+
+.areas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.chat-areas{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.model-areas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+#previous-chats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 2rem;
+
+    overflow-y: scroll !important;
+}
+
+.game-area{
+    height: 80vh;
+    width: 100%;
+}
+
+.navbar-left{
+    display: flex;
+    flex-direction: row;
+}
+
+a{
+    text-decoration:none !important;
+}
+
+.link-button{
+    border-radius: 1.5rem !important;
+    height: 50rem !important;
+    width: 30rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+}
+
+.login-areas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+    margin: 2rem;
+}
+
+.login-image{
+    width: 50vh; /* Increase the size of the image */
+    height: 50vh; /* Keep the aspect ratio the same as width */
+    margin: 1rem; /* Add some space between the image and the text */
+    border-radius: 50%; /* Make the image round */
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1rem;
+    background: var(--primaryGradient);
+
+    padding: 8rem 5rem 8rem 5rem;
+}
+
+.logo-bg{
+    border-radius: 50%;
+
+    background: var(--primaryGradient);
+}
+
+.user-card{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    background: var(--primaryGradient);
+    border-radius: 1rem;
+    padding: 3rem;
+
+    gap: 1rem;
+
+    width: 100% !important;
+    height: 100% !important;
+
+
+}
+
+.user-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+    height: 57% !important;
+    align-items:center; 
+    justify-content:center;
+}
+
+.user-main-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.search-bar{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 50% !important;
+
+    gap: 1rem;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.red-danger-text{
+    font-size: 14px;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}

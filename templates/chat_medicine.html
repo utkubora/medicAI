@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine Recommendation</title>
+    <link href="{{ url_for('static', filename='css/panels.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header navbar" style="background: var(--btn-info-blue) !important; box-shadow: var(--btn-info-blue-shadow) !important;">
+                    <div class="navbar-left">
+                        <div class="chatbox__image--header">
+                            <!-- Assuming the icon's link is static and doesn't need to be served through Flask's url_for -->
+                            <a href="{{ url_for('index') }}">
+                                <img src="/static/images/logo.png" alt="Support Person Image">
+                            </a>
+                        </div>
+                        <div class="chatbox__content--header">
+                            <h4 class="chatbox__heading--header">Medical AI</h4>
+                            <p class="chatbox__description--header">Ask your questions about medicine recommendation.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="navbar-name">
+
+                        <h4>{{ current_user.username }}</h4>
+                        <a href="{{ url_for('logout') }}" class="text-decoration-none btn btn-primary">Logout</a>
+
+                    </div>
+                </div>
+
+                <div class="chatbox__messages">
+                    <!-- Messages will be dynamically inserted here -->
+                    {% for message in messages[::-1] %}
+                        <p class="messages__item {% if message.fromWho == 'model' %} messages__item--visitor {% else %} messages__item--operator {% endif %}" >{{message.message}} </p>
+                    {% endfor %}
+                </div>
+
+                <div>
+                    <form class="chatbox__footer" style="background: var(--btn-info-blue) !important; box-shadow: var(--btn-info-blue-shadow) !important;" id="ask-form" method="post">
+                        <input type="hidden" id="chatId" value="{{ chatId }}" />
+                        <input type="text" id="data" name="data" placeholder="Write a message...">
+                        <button class="chatbox__send--footer send__button" id="btn-submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson | safe }};
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="{{ url_for('static', filename='js/chat_medicine.js') }}"></script>
+</body>
+</html>

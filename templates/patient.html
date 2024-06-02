@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link href="{{ url_for('static', filename='css/panels.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="">
+        <div class="chatbox">
+            <div class="chatbox__support">
+
+                <div class="chatbox__header navbar">
+                    <div class="navbar-left">
+                        <div class="chatbox__image--header">
+                            <!-- Assuming the icon's link is static and doesn't need to be served through Flask's url_for -->
+                            <a href="{{ url_for('index') }}">
+                                <img src="/static/images/logo.png" alt="Support Person Image">
+                            </a>
+                        </div>
+                        <div class="chatbox__content--header">
+                            <h4 class="chatbox__heading--header">Medical AI</h4>
+                            <p class="chatbox__description--header">MainPage.</p>
+                        </div>
+                    </div>
+
+                    <div class="navbar-name">
+
+                        <h4>{{ current_user.username }}</h4>
+                        <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a>
+    
+                    </div>
+
+                </div>
+                <div class="w-100 h-100 align-content-center justify-content-center">
+                    <!-- Messages will be dynamically inserted here -->
+
+                    <div class="areas">
+                    
+                        <a class="text-decoration-none btn btn-danger link-button" href="{{ url_for('disease_model') }}">
+                            <div class="">
+                                <img src="" />
+                                <h1>Disease Findings</h1>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
