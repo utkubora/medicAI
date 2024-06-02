@@ -180,13 +180,13 @@ def literature_model():
 #-------------------------------- CHAT PAGES --------------------------------------------------------------------
 @app.route('/disease-chat')
 @login_required
-@doctor_pages_permission.require(http_exception=403)
+@patient_pages_permission.require(http_exception=403)
 def disease_chat_panel():
     return DiseaseChat.ChatArea.createChatArea()
 
 @app.route('/medicine-chat')
 @login_required
-@patient_pages_permission.require(http_exception=403)
+@doctor_pages_permission.require(http_exception=403)
 def medicine_chat_panel():
     return MedicineChat.ChatArea.createChatArea()
 
