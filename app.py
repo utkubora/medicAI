@@ -97,7 +97,7 @@ def users_panel_filtered(filter = ""):
     if len(filter) == 0:
         users = User.query.order_by(desc(User.createDate)).all()
     else:
-        users = User.query.filter_by(username=filter).order_by(desc(User.createDate)).all()
+        users = User.query.filter(User.username.like(f"%{filter}%")).order_by(desc(User.createDate)).all()
     
     context = {
             'users' : users
