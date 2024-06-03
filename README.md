@@ -1,8 +1,9 @@
----
-title: "What is MedicAI? 🩺"
----
+# What is MedicAI? 🩺
+
+![alt text](images/demo.png)
 
 In the contemporary healthcare environment, several persistent challenges affect both patients and healthcare professionals. Patients often struggle to determine which specialist to consult based on their symptoms, leading to delays in appropriate care and potentially resulting in ineffective or incorrect treatment. Healthcare professionals face the daunting task of staying updated with the extensive and continually expanding body of medical literature, making it difficult to keep abreast of the latest developments and increasing the complexity involved in prescribing the correct medication.
+
 To address these issues, a comprehensive AI-based system was developed in a user-friendly website format. This system offers tailored access and functionalities based on the user type, including separate logins for doctors, patients, and administrators. Three models—Literature Review Model, Drug Recommendation Model, and Disease Detection Model—were meticulously trained to facilitate key aspects of healthcare, leveraging advanced artificial intelligence and machine learning techniques to enhance healthcare delivery and support medical practice.
 
 ![alt text](images/demo.png)
