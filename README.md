@@ -11,5 +11,5 @@ The Literature Review Model assists healthcare professionals in efficiently acce
 You can access the video link, the source code, the poster, and the report of this prohect from above and here:
 - [Video Link](https://github.com/academicpages/academicpages.github.io)
 - [Project Report](https://evrencagilci.github.io/medical.github.io//files/Final_bitirme.pdf)
-- [Source Code]()
+- [Source Code](https://github.com/utkubora/medicAI)
 - [Poster](https://evrencagilci.github.io/medical.github.io//files/final_poster.pdf)
