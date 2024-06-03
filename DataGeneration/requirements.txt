@@ -1,0 +1,10 @@
+langchain==0.0.354
+pinecone-client==2.2.2
+sentence_transformers==2.2.2
+pandas
+numpy
+openai
+faiss-cpu
+cohere
+python-dotenv
+langchain_community
