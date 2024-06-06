@@ -79,7 +79,7 @@ class Chatbox {
         //const chatmessage = chatbox.querySelector('.chatbox__messages');
         //chatmessage.innerHTML = html;
 
-        $('.chatbox__messages').append(html)
+        $('.chatbox__messages').prepend(html)
     }
 }
 
