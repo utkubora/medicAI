@@ -76,8 +76,10 @@ class Chatbox {
             html += `<div class='messages__item ${className}'>${item.message}</div>`;
         });
 
-        const chatmessage = chatbox.querySelector('.chatbox__messages');
-        chatmessage.innerHTML = html;
+        //const chatmessage = chatbox.querySelector('.chatbox__messages');
+        //chatmessage.innerHTML = html;
+
+        $('.chatbox__messages').append(html)
     }
 }
 
