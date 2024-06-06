@@ -23,7 +23,7 @@ class ChatFunction:
         predicted_label = tf.argmax(prediction_probs, axis=1).numpy()[0]
         
         if max_prob < threshold:
-            return "Hastalığınızın ne olduğundan emin değilim."
+            return "I am not sure about your disease."
         else:
             disease_name = self.inverse_mapping[predicted_label]
             return disease_name
