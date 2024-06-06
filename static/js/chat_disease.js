@@ -78,12 +78,11 @@ class Chatbox {
             html += `<div class='messages__item ${className}'>${item.message}</div>`;
         });
 
-        //const chatmessage = chatbox.querySelector('.chatbox__messages');
-        //chatmessage.innerHTML = html;
-
-        $('.chatbox__messages').prepend(html)
+        const chatmessage = chatbox.querySelector('.chatbox__messages');
+        chatmessage.innerHTML = html;
     }
 }
 
 const chatbox = new Chatbox();
 chatbox.display();
+
