@@ -1,0 +1,11 @@
+{
+    "args":
+    {
+        "dir_path": "/Users/gokcenazakyol/Desktop/ai_in_healthcare/SyntheticData/data/cardiology.pdf",
+        "save_dir_path": "Files/",
+        "chunk_size": 2000,
+        "chunk_overlap": 0,
+        "question_pre_context": "You are a question and answer assistant who speaks English and help medicine students and doctors about their literature reviews. Using the data you have obtained, can you write one question whose answers are included in this data? Let your writing language be English.",
+        "answer_pre_context": "You are a question and answer assistant who speaks English and help medicine students and doctors about their literature reviews. Create an answer to the questions based on the given text. Make sure your answer is between 10-50 words. Let your writing language be English."
+    }
+}
